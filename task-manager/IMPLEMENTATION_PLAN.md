@@ -13,7 +13,7 @@
 ## Phase 2: Core Commands
 - [x] Implement `task add`
 - [x] Add tests for `task add`
-- [ ] Implement `task list`
+- [x] Implement `task list`
 - [ ] Add tests for `task list`
 - [ ] Implement `task done`
 - [ ] Add tests for `task done`
@@ -38,3 +38,4 @@
 | 2026-03-15 | Create basic test structure | Complete | Added pytest config and shared fixtures |
 | 2026-03-15 | Implement `task add` | Complete | Added CLI command to create tasks |
 | 2026-03-15 | Add tests for `task add` | Complete | Added CLI test for task creation |
+| 2026-03-15 | Implement `task list` | Complete | Added CLI command to list tasks |

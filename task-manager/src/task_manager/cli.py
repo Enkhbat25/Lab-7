@@ -44,3 +44,36 @@ def add_task(title: str, description: str, due_date: str, priority: str) -> None
     tasks.append(task)
     save_tasks(tasks)
     click.echo(f"Added task {task.id}: {task.title}")
+
+
+@main.command("list")
+@click.option(
+    "--status",
+    "status_filter",
+    type=click.Choice(["todo", "done"], case_sensitive=False),
+    default=None,
+)
+@click.option(
+    "--priority",
+    "priority_filter",
+    type=click.Choice(["high", "medium", "low"], case_sensitive=False),
+    default=None,
+)
+def list_tasks(status_filter: str | None, priority_filter: str | None) -> None:
+    """List tasks with optional filters."""
+    tasks = load_tasks()
+    if status_filter:
+        tasks = [task for task in tasks if task.status == status_filter.lower()]
+    if priority_filter:
+        tasks = [task for task in tasks if task.priority == priority_filter.lower()]
+
+    if not tasks:
+        click.echo("No tasks found.")
+        return
+
+    for task in tasks:
+        due = f" (due {task.due_date})" if task.due_date else ""
+        click.echo(
+            f"{task.id}. [{task.status}] {task.title} "
+            f"({task.priority}){due}"
+        )
