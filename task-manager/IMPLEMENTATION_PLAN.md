@@ -8,7 +8,7 @@
 - [x] Initialize project structure
 - [x] Create Task dataclass
 - [x] Set up JSON storage utilities
-- [ ] Create basic test structure
+- [x] Create basic test structure
 
 ## Phase 2: Core Commands
 - [ ] Implement `task add`
@@ -35,3 +35,4 @@
 | 2026-03-15 | Initialize project structure | Complete | Added project skeleton and minimal CLI entrypoint |
 | 2026-03-15 | Create Task dataclass | Complete | Added core Task model with type hints |
 | 2026-03-15 | Set up JSON storage utilities | Complete | Added JSON load/save helpers |
+| 2026-03-15 | Create basic test structure | Complete | Added pytest config and shared fixtures |
