@@ -14,7 +14,7 @@
 - [x] Implement `task add`
 - [x] Add tests for `task add`
 - [x] Implement `task list`
-- [ ] Add tests for `task list`
+- [x] Add tests for `task list`
 - [ ] Implement `task done`
 - [ ] Add tests for `task done`
 
@@ -39,3 +39,4 @@
 | 2026-03-15 | Implement `task add` | Complete | Added CLI command to create tasks |
 | 2026-03-15 | Add tests for `task add` | Complete | Added CLI test for task creation |
 | 2026-03-15 | Implement `task list` | Complete | Added CLI command to list tasks |
+| 2026-03-15 | Add tests for `task list` | Complete | Added CLI tests for listing tasks |
