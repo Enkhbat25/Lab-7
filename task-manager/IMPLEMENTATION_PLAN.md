@@ -12,7 +12,7 @@
 
 ## Phase 2: Core Commands
 - [x] Implement `task add`
-- [ ] Add tests for `task add`
+- [x] Add tests for `task add`
 - [ ] Implement `task list`
 - [ ] Add tests for `task list`
 - [ ] Implement `task done`
@@ -37,3 +37,4 @@
 | 2026-03-15 | Set up JSON storage utilities | Complete | Added JSON load/save helpers |
 | 2026-03-15 | Create basic test structure | Complete | Added pytest config and shared fixtures |
 | 2026-03-15 | Implement `task add` | Complete | Added CLI command to create tasks |
+| 2026-03-15 | Add tests for `task add` | Complete | Added CLI test for task creation |
