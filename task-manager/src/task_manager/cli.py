@@ -77,3 +77,20 @@ def list_tasks(status_filter: str | None, priority_filter: str | None) -> None:
             f"{task.id}. [{task.status}] {task.title} "
             f"({task.priority}){due}"
         )
+
+
+@main.command("done")
+@click.argument("task_id", type=int)
+def mark_done(task_id: int) -> None:
+    """Mark a task as complete."""
+    tasks = load_tasks()
+    for task in tasks:
+        if task.id == task_id:
+            task.status = "done"
+            task.updated_at = datetime.now()
+            save_tasks(tasks)
+            click.echo(f"Marked task {task_id} as done.")
+            return
+
+    click.echo(f"Task {task_id} not found.")
+    raise SystemExit(1)
