@@ -7,7 +7,7 @@
 ## Phase 1: Setup
 - [x] Initialize project structure
 - [x] Create Task dataclass
-- [ ] Set up JSON storage utilities
+- [x] Set up JSON storage utilities
 - [ ] Create basic test structure
 
 ## Phase 2: Core Commands
@@ -34,3 +34,4 @@
 |------|------|--------|-------|
 | 2026-03-15 | Initialize project structure | Complete | Added project skeleton and minimal CLI entrypoint |
 | 2026-03-15 | Create Task dataclass | Complete | Added core Task model with type hints |
+| 2026-03-15 | Set up JSON storage utilities | Complete | Added JSON load/save helpers |
