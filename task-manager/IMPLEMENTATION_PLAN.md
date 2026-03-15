@@ -6,7 +6,7 @@
 
 ## Phase 1: Setup
 - [x] Initialize project structure
-- [ ] Create Task dataclass
+- [x] Create Task dataclass
 - [ ] Set up JSON storage utilities
 - [ ] Create basic test structure
 
@@ -33,3 +33,4 @@
 | Date | Task | Status | Notes |
 |------|------|--------|-------|
 | 2026-03-15 | Initialize project structure | Complete | Added project skeleton and minimal CLI entrypoint |
+| 2026-03-15 | Create Task dataclass | Complete | Added core Task model with type hints |
