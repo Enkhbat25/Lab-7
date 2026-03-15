@@ -11,7 +11,7 @@
 - [x] Create basic test structure
 
 ## Phase 2: Core Commands
-- [ ] Implement `task add`
+- [x] Implement `task add`
 - [ ] Add tests for `task add`
 - [ ] Implement `task list`
 - [ ] Add tests for `task list`
@@ -36,3 +36,4 @@
 | 2026-03-15 | Create Task dataclass | Complete | Added core Task model with type hints |
 | 2026-03-15 | Set up JSON storage utilities | Complete | Added JSON load/save helpers |
 | 2026-03-15 | Create basic test structure | Complete | Added pytest config and shared fixtures |
+| 2026-03-15 | Implement `task add` | Complete | Added CLI command to create tasks |
