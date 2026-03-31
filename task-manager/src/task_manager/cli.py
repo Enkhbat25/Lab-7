@@ -10,6 +10,14 @@ from .models import Task
 from .storage import load_tasks, save_tasks
 
 
+def _find_task(tasks: list[Task], task_id: int) -> Task | None:
+    """Return the task matching the given id, if it exists."""
+    for task in tasks:
+        if task.id == task_id:
+            return task
+    return None
+
+
 @click.group()
 def main() -> None:
     """Run the task manager CLI."""
@@ -84,13 +92,28 @@ def list_tasks(status_filter: str | None, priority_filter: str | None) -> None:
 def mark_done(task_id: int) -> None:
     """Mark a task as complete."""
     tasks = load_tasks()
-    for task in tasks:
-        if task.id == task_id:
-            task.status = "done"
-            task.updated_at = datetime.now()
-            save_tasks(tasks)
-            click.echo(f"Marked task {task_id} as done.")
-            return
+    task = _find_task(tasks, task_id)
+    if task is not None:
+        task.status = "done"
+        task.updated_at = datetime.now()
+        save_tasks(tasks)
+        click.echo(f"Marked task {task_id} as done.")
+        return
 
     click.echo(f"Task {task_id} not found.")
     raise SystemExit(1)
+
+
+@main.command("delete")
+@click.argument("task_id", type=int)
+def delete_task(task_id: int) -> None:
+    """Delete a task from the list."""
+    tasks = load_tasks()
+    task = _find_task(tasks, task_id)
+    if task is None:
+        click.echo(f"Task {task_id} not found.")
+        raise SystemExit(1)
+
+    remaining_tasks = [saved_task for saved_task in tasks if saved_task.id != task_id]
+    save_tasks(remaining_tasks)
+    click.echo(f"Deleted task {task_id}: {task.title}")
