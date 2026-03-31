@@ -1,0 +1,26 @@
+# Python environments and caches
+.venv/
+.deps/
+.tmp/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+tests/.tmp/
+
+# Task manager local/runtime files
+task-manager/.venv/
+task-manager/.deps/
+task-manager/.tmp/
+task-manager/__pycache__/
+task-manager/src/**/__pycache__/
+task-manager/tests/__pycache__/
+task-manager/tests/.tmp/
+task-manager/pytest-cache-files-*/
+task-manager/tasks.json
+task-manager/report.html
+
+# Out-of-scope planning/export assets for this submission
+task-manager/PROMPT.md
+task-manager/SPEC.md
+task-manager/scripts/
+task-manager/templates/
