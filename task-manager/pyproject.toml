@@ -7,6 +7,11 @@ dependencies = [
   "click>=8.1",
 ]
 
+[project.optional-dependencies]
+dev = [
+  "pytest>=9.0",
+]
+
 [project.scripts]
 task = "task_manager.cli:main"
 
